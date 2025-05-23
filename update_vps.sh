@@ -56,7 +56,7 @@ fi
 # Backup the current application on the VPS
 echo -e "${YELLOW}Creating backup of current application on VPS...${NC}"
 BACKUP_DIR="$VPS_APP_DIR-backup-$(date +%Y%m%d%H%M%S)"
-execute_ssh_command "cp -r $VPS_APP_DIR $BACKUP_DIR"
+execute_ssh_command "echo $VPS_PASS | sudo -S cp -r $VPS_APP_DIR $BACKUP_DIR"
 echo -e "${GREEN}Backup created at $BACKUP_DIR${NC}"
 
 # Copy the updated code to the VPS
@@ -85,7 +85,7 @@ FLUSH PRIVILEGES;
 EOF
 )
 
-execute_ssh_command "echo \"$DB_SETUP\" | sudo mysql"
+execute_ssh_command "echo \"$DB_SETUP\" | sudo -S mysql"
 echo -e "${GREEN}MySQL database setup completed.${NC}"
 
 # Create .env file for database configuration
@@ -118,7 +118,7 @@ echo -e "${GREEN}Frontend dependencies installed.${NC}"
 
 # Run database migrations
 echo -e "${YELLOW}Running database migrations on VPS...${NC}"
-execute_ssh_command "cd $VPS_APP_DIR/backend && python manage.py migrate"
+execute_ssh_command "cd $VPS_APP_DIR/backend && python3 manage.py migrate"
 echo -e "${GREEN}Database migrations completed.${NC}"
 
 # Build the frontend
@@ -128,8 +128,8 @@ echo -e "${GREEN}Frontend built successfully.${NC}"
 
 # Restart the application services
 echo -e "${YELLOW}Restarting application services on VPS...${NC}"
-execute_ssh_command "sudo systemctl restart gunicorn"
-execute_ssh_command "sudo systemctl restart nginx"
+execute_ssh_command "echo $VPS_PASS | sudo -S systemctl restart gunicorn"
+execute_ssh_command "echo $VPS_PASS | sudo -S systemctl restart nginx"
 echo -e "${GREEN}Application services restarted.${NC}"
 
 echo -e "${GREEN}VPS update completed successfully!${NC}"
