@@ -1,8 +1,14 @@
 from rest_framework import serializers
+from django.contrib.auth import get_user_model
 from api.models import (
     ProductCategory, Product, ProductSubscriptionPlan, SignalDetail, BotDetail,
-    ProductReview, ProductBundle, Order, OrderItem, UserSubscription
+    BotFile, UserBotConfiguration, BotLicense, BotDownloadActivationLog,
+    ProductReview, ProductBundle, ProductBundleItem, DigitalInventory,
+    Order, OrderItem, UserSubscription, Payment, PaymentLog,
+    Page, Report, Notification
 )
+
+User = get_user_model()
 
 class ProductCategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -178,3 +184,48 @@ class UserSubscriptionSerializer(serializers.ModelSerializer):
     
     def get_product_name(self, obj):
         return obj.subscription_plan.product.name
+
+
+class PaymentLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PaymentLog
+        fields = ['id', 'payment', 'action', 'status', 'data', 'ip_address', 'created_at']
+
+
+class PaymentSerializer(serializers.ModelSerializer):
+    logs = PaymentLogSerializer(many=True, read_only=True)
+    
+    class Meta:
+        model = Payment
+        fields = [
+            'id', 'payment_id', 'order', 'payment_method', 'amount', 'currency',
+            'status', 'transaction_id', 'payment_data', 'logs', 'created_at', 'updated_at'
+        ]
+
+
+class PageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Page
+        fields = [
+            'id', 'title', 'slug', 'content', 'meta_title', 'meta_description',
+            'is_published', 'published_at', 'created_at', 'updated_at'
+        ]
+
+
+class ReportSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Report
+        fields = [
+            'id', 'name', 'report_type', 'parameters', 'result_data', 'created_by',
+            'is_scheduled', 'schedule_frequency', 'last_run_at', 'next_run_at',
+            'created_at', 'updated_at'
+        ]
+
+
+class NotificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notification
+        fields = [
+            'id', 'user', 'title', 'message', 'notification_type',
+            'is_read', 'read_at', 'data', 'created_at'
+        ]

@@ -64,6 +64,37 @@ const router = createRouter({
           path: '',
           name: 'dashboard-home',
           component: () => import('../views/dashboard/DashboardHomeView.vue')
+        },
+        {
+          path: 'payment/:id',
+          name: 'payment',
+          component: () => import('../views/dashboard/PaymentView.vue')
+        },
+        {
+          path: 'payments',
+          name: 'payments',
+          component: () => import('../views/dashboard/PaymentsView.vue')
+        },
+        {
+          path: 'payment-status/:paymentId',
+          name: 'payment-status',
+          component: () => import('../views/dashboard/PaymentStatusView.vue'),
+          props: true
+        },
+        {
+          path: 'orders',
+          name: 'orders',
+          component: () => import('../views/dashboard/OrdersView.vue')
+        },
+        {
+          path: 'profile',
+          name: 'profile',
+          component: () => import('../views/dashboard/ProfileView.vue')
+        },
+        {
+          path: 'subscriptions',
+          name: 'subscriptions',
+          component: () => import('../views/dashboard/SubscriptionsView.vue')
         }
       ]
     }

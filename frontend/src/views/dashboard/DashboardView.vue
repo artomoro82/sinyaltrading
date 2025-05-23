@@ -30,6 +30,18 @@
             </router-link>
           </li>
           <li>
+            <router-link to="/dashboard/orders">
+              <span class="nav-icon">🛍️</span>
+              <span class="nav-text" v-if="!sidebarCollapsed">My Orders</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/dashboard/subscriptions">
+              <span class="nav-icon">🔄</span>
+              <span class="nav-text" v-if="!sidebarCollapsed">Subscriptions</span>
+            </router-link>
+          </li>
+          <li>
             <router-link to="/dashboard/products">
               <span class="nav-icon">🛒</span>
               <span class="nav-text" v-if="!sidebarCollapsed">Products</span>
@@ -42,9 +54,21 @@
             </router-link>
           </li>
           <li>
+            <router-link to="/dashboard/payments">
+              <span class="nav-icon">💳</span>
+              <span class="nav-text" v-if="!sidebarCollapsed">Payments</span>
+            </router-link>
+          </li>
+          <li>
             <router-link to="/dashboard/referrals">
               <span class="nav-icon">👥</span>
               <span class="nav-text" v-if="!sidebarCollapsed">Referrals</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/dashboard/profile">
+              <span class="nav-icon">👤</span>
+              <span class="nav-text" v-if="!sidebarCollapsed">My Profile</span>
             </router-link>
           </li>
           <li>
