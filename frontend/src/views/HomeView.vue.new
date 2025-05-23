@@ -1,0 +1,867 @@
+<template>
+  <div class="home">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Revolutionize Your Trading Experience</h1>
+          <p>Access premium trading signals, automated bots, and educational resources to elevate your trading strategy.</p>
+          <div class="hero-cta">
+            <router-link to="/register" class="btn btn-primary">Get Started Free</router-link>
+            <router-link to="/products" class="btn btn-secondary">Explore Products</router-link>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="@/assets/hero-image.svg" alt="Trading Platform Dashboard" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="@/assets/icons/signals.svg" alt="Trading Signals" />
+            </div>
+            <h3>Trading Signals</h3>
+            <p>Get real-time, high-accuracy trading signals across multiple markets and timeframes.</p>
+            <router-link to="/products?type=signal" class="feature-link">Learn More</router-link>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="@/assets/icons/bots.svg" alt="Trading Bots" />
+            </div>
+            <h3>Trading Bots</h3>
+            <p>Automate your trading with our advanced, customizable bots that execute strategies 24/7.</p>
+            <router-link to="/products?type=bot" class="feature-link">Learn More</router-link>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="@/assets/icons/education.svg" alt="Educational Resources" />
+            </div>
+            <h3>Educational Resources</h3>
+            <p>Access comprehensive courses, webinars, and tutorials to enhance your trading knowledge.</p>
+            <router-link to="/education" class="feature-link">Learn More</router-link>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="@/assets/icons/community.svg" alt="Community" />
+            </div>
+            <h3>Community</h3>
+            <p>Join a thriving community of traders to share insights, strategies, and support.</p>
+            <router-link to="/community" class="feature-link">Learn More</router-link>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Create Your Account</h3>
+            <p>Sign up for free and set up your profile in just a few minutes.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Choose Your Products</h3>
+            <p>Browse our marketplace and select the signals, bots, or courses that match your needs.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Configure & Deploy</h3>
+            <p>Set up your products with our easy-to-use interface and deploy them to your accounts.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Monitor & Optimize</h3>
+            <p>Track performance in real-time and optimize your strategies for better results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The trading signals have completely transformed my approach to the markets. The accuracy is impressive, and the ROI speaks for itself."</p>
+            </div>
+            <div class="testimonial-author">
+              <!-- Testimonial image placeholder -->
+              <div>
+                <h4>Sarah Johnson</h4>
+                <p>Forex Trader, 2 years with us</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The automated bots have saved me countless hours. I can finally trade 24/7 without being glued to my screen, and the results are fantastic."</p>
+            </div>
+            <div class="testimonial-author">
+              <!-- Testimonial image placeholder -->
+              <div>
+                <h4>Michael Chen</h4>
+                <p>Crypto Trader, 1 year with us</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The educational resources are top-notch. I went from a complete beginner to a confident trader in just a few months thanks to the structured courses."</p>
+            </div>
+            <div class="testimonial-author">
+              <!-- Testimonial image placeholder -->
+              <div>
+                <h4>Elena Rodriguez</h4>
+                <p>Stock Trader, 3 years with us</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2 class="section-title">Pricing Plans</h2>
+        <p class="section-subtitle">Choose the plan that fits your trading needs</p>
+        
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Basic</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">29</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>5 Trading Signals per Week</li>
+                <li>1 Basic Trading Bot</li>
+                <li>Access to Community Forums</li>
+                <li>Basic Educational Content</li>
+                <li>Email Support</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <router-link to="/register?plan=basic" class="btn btn-outline">Get Started</router-link>
+            </div>
+          </div>
+          
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Pro</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">79</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Unlimited Trading Signals</li>
+                <li>3 Advanced Trading Bots</li>
+                <li>Priority Access to New Features</li>
+                <li>Full Educational Library</li>
+                <li>Priority Support</li>
+                <li>Trading Journal Tools</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <router-link to="/register?plan=pro" class="btn btn-primary">Get Started</router-link>
+            </div>
+          </div>
+          
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Enterprise</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">199</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>All Pro Features</li>
+                <li>Unlimited Trading Bots</li>
+                <li>Custom Bot Development</li>
+                <li>API Access</li>
+                <li>Dedicated Account Manager</li>
+                <li>24/7 Premium Support</li>
+                <li>White-label Options</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <router-link to="/register?plan=enterprise" class="btn btn-outline">Get Started</router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-preview">
+      <div class="container">
+        <h2 class="section-title">Latest from Our Blog</h2>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="@/assets/blog/post1.jpg" alt="Blog Post" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-category">Strategy</div>
+              <h3>5 Essential Risk Management Techniques for Traders</h3>
+              <p>Learn how to protect your capital and maximize returns with these proven risk management strategies.</p>
+              <router-link to="/blog/risk-management-techniques" class="blog-link">Read More</router-link>
+            </div>
+          </div>
+          
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="@/assets/blog/post2.jpg" alt="Blog Post" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-category">Technology</div>
+              <h3>How AI is Transforming the Trading Landscape</h3>
+              <p>Discover the latest AI innovations that are revolutionizing how traders analyze markets and execute trades.</p>
+              <router-link to="/blog/ai-trading-innovations" class="blog-link">Read More</router-link>
+            </div>
+          </div>
+          
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="@/assets/blog/post3.jpg" alt="Blog Post" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-category">Education</div>
+              <h3>Beginner's Guide to Technical Analysis</h3>
+              <p>Start your journey into technical analysis with this comprehensive guide for beginners.</p>
+              <router-link to="/blog/technical-analysis-guide" class="blog-link">Read More</router-link>
+            </div>
+          </div>
+        </div>
+        <div class="blog-cta">
+          <router-link to="/blog" class="btn btn-secondary">View All Articles</router-link>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Transform Your Trading?</h2>
+          <p>Join thousands of successful traders who have elevated their trading with our platform.</p>
+          <router-link to="/register" class="btn btn-primary btn-large">Start Your Free Trial</router-link>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HomeView',
+  mounted() {
+    // Any initialization code can go here
+    document.title = 'Fintech Platform - Trading Signals, Bots & Education'
+  }
+}
+</script>
+
+<style scoped>
+/* Hero Section */
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #2a2a5a 100%);
+  color: var(--light-text);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light-text);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+
+/* Section Styles */
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: #666;
+}
+
+/* Features Section */
+.features {
+  background-color: var(--light-bg);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(58, 134, 255, 0.1);
+  border-radius: 50%;
+}
+
+.feature-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.feature-link {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.feature-link:after {
+  content: '→';
+  margin-left: 5px;
+  transition: margin-left 0.3s ease;
+}
+
+.feature-link:hover:after {
+  margin-left: 10px;
+}
+
+/* How It Works Section */
+.how-it-works {
+  background-color: white;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  position: relative;
+}
+
+.steps:before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 1;
+  padding: 0 15px;
+}
+
+.step-number {
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.step p {
+  color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: var(--light-bg);
+}
+
+.testimonial-slider {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+}
+
+.testimonial {
+  min-width: 350px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-content {
+  margin-bottom: 20px;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  color: #444;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-author h4 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.testimonial-author p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Pricing Section */
+.pricing {
+  background-color: white;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.pricing-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom-left-radius: 10px;
+}
+
+.pricing-header {
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.amount {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.period {
+  font-size: 1rem;
+  color: #666;
+  margin-left: 5px;
+}
+
+.pricing-features {
+  padding: 30px;
+}
+
+.pricing-features ul {
+  list-style: none;
+}
+
+.pricing-features li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  padding-left: 25px;
+}
+
+.pricing-features li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-footer {
+  padding: 0 30px 30px;
+  text-align: center;
+}
+
+/* Blog Preview Section */
+.blog-preview {
+  background-color: var(--light-bg);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.blog-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.1);
+}
+
+.blog-content {
+  padding: 25px;
+}
+
+.blog-category {
+  display: inline-block;
+  background-color: rgba(58, 134, 255, 0.1);
+  color: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.blog-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.blog-content p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.blog-link {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.blog-link:after {
+  content: '→';
+  margin-left: 5px;
+  transition: margin-left 0.3s ease;
+}
+
+.blog-link:hover:after {
+  margin-left: 10px;
+}
+
+.blog-cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .steps {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .steps:before {
+    display: none;
+  }
+  
+  .pricing-card.featured {
+    transform: none;
+  }
+  
+  .pricing-card.featured:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .testimonial-slider {
+    flex-direction: column;
+  }
+  
+  .testimonial {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+</style>

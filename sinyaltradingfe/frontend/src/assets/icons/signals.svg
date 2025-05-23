@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient-signal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a86ff" />
+      <stop offset="100%" stop-color="#8338ec" />
+    </linearGradient>
+  </defs>
+  <circle cx="25" cy="25" r="20" fill="url(#gradient-signal)" />
+  <path d="M15 25 L25 35 L35 25" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M15 15 L25 25 L35 15" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
